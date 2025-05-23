@@ -1,0 +1,144 @@
+/* General Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  animation: float 6s ease-in-out infinite;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  //background-image: url('assets/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Hero Text */
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  transition: font-size 0.5s ease-in-out;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Navigation Links */
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+  margin-top: 5px;
+}
+
+nav a:hover {
+  color: #4CAF50;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Main Sections */
+.main-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+/* Card Grid */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: white;
+  color: #333;
+  flex: 1 1 300px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #222;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Responsive Text Scaling */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  .card-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
