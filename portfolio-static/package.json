@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "deploy": "ng build --configuration production --delete-output-path=false && cd .. && git add -A && git commit -m \"Rebuild\" && git push",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
