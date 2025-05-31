@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "../docs",         // ① write bundle into docs/
+            "outputPath": "../docs",
             "baseHref": "/",   
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -30,7 +30,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/app/assets"
             ],
             "styles": [
               "src/styles.scss"
